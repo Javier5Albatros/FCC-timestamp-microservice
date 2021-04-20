@@ -4,7 +4,7 @@ const handleDate = (req, res) => {
   const date = req.date;
   if (isValidDate(date)) {
     return res.json({
-      unix: new Date().getTime(),
+      unix: date.getTime(),
       utc: date.toGMTString(),
     });
   } else {
